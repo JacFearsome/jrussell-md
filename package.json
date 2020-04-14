@@ -1,0 +1,50 @@
+{
+  "name": "jrussell-md",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://jacfearsome.github.io/jrussell-md",
+  "dependencies": {
+    "@blueprintjs/core": "^3.25.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "brace": "^0.11.1",
+    "file-saver": "^2.0.2",
+    "github-markdown-css": "^4.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-ace": "^8.1.0",
+    "react-dom": "^16.13.1",
+    "react-files": "^2.4.8",
+    "react-markdown": "^4.3.1",
+    "react-mde": "^8.2.0",
+    "react-scripts": "3.4.1",
+    "showdown": "^1.9.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
