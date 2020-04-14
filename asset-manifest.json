@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/jrussell-md/static/css/main.c0fe06a2.chunk.css",
+    "main.js": "/jrussell-md/static/js/main.a6e33958.chunk.js",
+    "main.js.map": "/jrussell-md/static/js/main.a6e33958.chunk.js.map",
+    "runtime-main.js": "/jrussell-md/static/js/runtime-main.d1728c26.js",
+    "runtime-main.js.map": "/jrussell-md/static/js/runtime-main.d1728c26.js.map",
+    "static/css/2.7d2e3730.chunk.css": "/jrussell-md/static/css/2.7d2e3730.chunk.css",
+    "static/js/2.a1a9fd4a.chunk.js": "/jrussell-md/static/js/2.a1a9fd4a.chunk.js",
+    "static/js/2.a1a9fd4a.chunk.js.map": "/jrussell-md/static/js/2.a1a9fd4a.chunk.js.map",
+    "index.html": "/jrussell-md/index.html",
+    "precache-manifest.7bef801e41eca99ec73d7265a70e3b45.js": "/jrussell-md/precache-manifest.7bef801e41eca99ec73d7265a70e3b45.js",
+    "service-worker.js": "/jrussell-md/service-worker.js",
+    "static/css/2.7d2e3730.chunk.css.map": "/jrussell-md/static/css/2.7d2e3730.chunk.css.map",
+    "static/css/main.c0fe06a2.chunk.css.map": "/jrussell-md/static/css/main.c0fe06a2.chunk.css.map",
+    "static/js/2.a1a9fd4a.chunk.js.LICENSE.txt": "/jrussell-md/static/js/2.a1a9fd4a.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/jrussell-md/static/media/icons-20.cef8cdbb.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d1728c26.js",
+    "static/css/2.7d2e3730.chunk.css",
+    "static/js/2.a1a9fd4a.chunk.js",
+    "static/css/main.c0fe06a2.chunk.css",
+    "static/js/main.a6e33958.chunk.js"
+  ]
+}
