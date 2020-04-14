@@ -39,10 +39,9 @@ class App extends React.Component {
 
         this.state = {
             file: "",
-            mode: "monokai",
-            theme: "github",
             isOpen: false,
             selectedTab: "write",
+            filename: "file.md",
         }
         this.handleOpen = this.handleOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
@@ -56,9 +55,10 @@ class App extends React.Component {
     };
 
     handleFileChosen = (files) => {
-        let file = files[0]
+        let file = files[0];
         this.fileReader = new FileReader();
         this.fileReader.onloadend = this.handleFileRead;
+        this.setState({ filename: file.name })
         this.fileReader.readAsText(file);
     };
 
@@ -91,7 +91,7 @@ class App extends React.Component {
     }
     saveFile = () => {
         let blob = new Blob([this.state.file], {type: "text/plain;charset=utf-8"});
-        saveAs(blob, "file.md");
+        saveAs(blob, this.state.filename);
     }
     render() {
         return (
