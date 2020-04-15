@@ -100,8 +100,7 @@ class App extends React.Component {
                     <Navbar.Group align={Alignment.LEFT}>
                         <Navbar.Heading>Markdown Editor</Navbar.Heading>
                         <Navbar.Divider />
-                        <Button onClick={this.handleOpen} className="bp3-minimal" icon="document-open" text="GitHub Preview" />
-                        <Button className="bp3-minimal" icon="upload" text=""><Files
+                        <Files
                             className='files-dropzone'
                             onChange={this.handleFileChosen}
                             onError={this.onFilesError}
@@ -110,7 +109,7 @@ class App extends React.Component {
                             maxFileSize={10000000}
                             minFileSize={0}
                             clickable
-                        >Load Local File</Files></Button>
+                        ><Button className="bp3-minimal" icon="upload" text="">Load Local File</Button></Files>
                         <Button onClick={this.saveFile} className="bp3-minimal" icon="floppy-disk" text="Save Local File" />
                     </Navbar.Group>
                 </Navbar>
@@ -122,20 +121,24 @@ class App extends React.Component {
                 >
                     <div className={Classes.DRAWER_BODY}>
                         <div className={Classes.DIALOG_BODY}>
-                            <ReactMarkdown className="markdown-body" source={this.state.file} />
+                            
                         </div>
                     </div>
                     <div className={Classes.DRAWER_FOOTER}></div>
                 </Drawer>
-                <ReactMde
-                    value={this.state.file}
-                    onChange={this.onChange}
-                    selectedTab={this.state.selectedTab}
-                    onTabChange={this.setSelectedTab}
-                    generateMarkdownPreview={markdown =>
-                      Promise.resolve(converter.makeHtml(markdown))
-                    }
-                />
+                <div className="row">
+                    <div className="column">   
+                        <ReactMde
+                            value={this.state.file}
+                            onChange={this.onChange}
+                            minEditorHeight="800px"
+                            generateMarkdownPreview={false}
+                        />
+                    </div>
+                    <div className="column preview">
+                        <ReactMarkdown className="markdown-body" source={this.state.file} />
+                    </div>
+                </div>
             </div>
         );
     }
