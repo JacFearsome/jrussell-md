@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e4662e7e5b5126f2b705fd11e0184a52",
+    "revision": "39b3d631e833368838faee4a62cc04c7",
     "url": "/jrussell-md/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jrussell-md/static/css/2.7d2e3730.chunk.css"
   },
   {
-    "revision": "85cb3fde82fb1619fc24",
-    "url": "/jrussell-md/static/css/main.c0fe06a2.chunk.css"
+    "revision": "7c01093124fb85ca3bb0",
+    "url": "/jrussell-md/static/css/main.dbc8403e.chunk.css"
   },
   {
     "revision": "6cf73f662ef625f89908",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jrussell-md/static/js/2.a1a9fd4a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "85cb3fde82fb1619fc24",
-    "url": "/jrussell-md/static/js/main.508e10b3.chunk.js"
+    "revision": "7c01093124fb85ca3bb0",
+    "url": "/jrussell-md/static/js/main.57b2cc86.chunk.js"
   },
   {
     "revision": "e6a757c1b19cd99c8a29",
