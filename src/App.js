@@ -19,11 +19,11 @@ import {
     NavbarHeading,
     FileInput,
 } from "@blueprintjs/core";
+import { Hotkey, Hotkeys, HotkeysTarget } from "@blueprintjs/core";
 import { saveAs } from 'file-saver';
 import Files from 'react-files'
 import "react-mde/lib/styles/css/react-mde-all.css";
 import 'github-markdown-css/github-markdown.css';
-
 const converter = new Showdown.Converter({
     tables: true,
     simplifiedAutoLink: true,
@@ -93,6 +93,17 @@ class App extends React.Component {
         let blob = new Blob([this.state.file], {type: "text/plain;charset=utf-8"});
         saveAs(blob, this.state.filename);
     }
+    renderHotkeys() {
+        return <Hotkeys>
+            <Hotkey
+                global={true}
+                combo="ctrl+s"
+                label="Save File"
+                onKeyDown={this.saveFile}
+                preventDefault={true}
+            />
+        </Hotkeys>;
+    }
     render() {
         return (
             <div>
@@ -111,23 +122,26 @@ class App extends React.Component {
                             clickable
                         ><Button className="bp3-minimal" icon="upload" text="">Load Local File</Button></Files>
                         <Button onClick={this.saveFile} className="bp3-minimal" icon="floppy-disk" text="Save Local File" />
+                        <Button onClick={this.handleOpen} className="bp3-minimal" icon="document-open" text="Keyboard Shortcuts" />
                     </Navbar.Group>
                 </Navbar>
                 <Drawer
                     icon="document"
                     onClose={this.handleClose}
-                    title="GitHub Preview"
+                    title="Keyboard Shortcuts"
                     isOpen={this.state.isOpen}
                 >
                     <div className={Classes.DRAWER_BODY}>
                         <div className={Classes.DIALOG_BODY}>
-                            
+                            <Hotkeys>
+                                <Hotkey preventDefault label="Save" combo="ctrl+s" preventDefault={true} global onKeyDown={this.saveFile} />
+                            </Hotkeys>
                         </div>
                     </div>
                     <div className={Classes.DRAWER_FOOTER}></div>
                 </Drawer>
                 <div className="row">
-                    <div className="column">   
+                    <div className="column">
                         <ReactMde
                             value={this.state.file}
                             onChange={this.onChange}
